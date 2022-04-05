@@ -175,7 +175,7 @@ nmap <leader><leader>s <Plug>(easymotion-overwin-f2)
 
 
 "coc配置
-let g:coc_global_extensions = ['coc-marketplace','coc-json','coc-vetur','coc-markdown-preview-enhanced','coc-prettier','coc-html','coc-tsserver','coc-css','coc-gitignore','coc-webview']
+let g:coc_global_extensions = ['coc-eslint','coc-marketplace','coc-json','coc-vetur','coc-markdown-preview-enhanced','coc-prettier','coc-html','coc-tsserver','coc-css','coc-gitignore','coc-webview']
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
