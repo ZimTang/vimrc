@@ -134,7 +134,6 @@ Plug 'mxw/vim-jsx'
 "emmet
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'prettier/vim-prettier'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'honza/vim-snippets'
 Plug 'brooth/far.vim'
@@ -211,6 +210,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 " Applying codeAction to the selected region.
@@ -219,9 +219,10 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 "取消高亮搜索
-nnoremap <C-n> :set nohlsearch<CR>
+nnoremap <leader><C-n> :set nohlsearch<CR>
 set background=light
 colorscheme solarized
 syntax enable       "开启语法高亮功能
 "浏览器预览html
 nmap <silent> <leader>w :!google-chrome % &
+
