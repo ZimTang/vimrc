@@ -1,24 +1,10 @@
+"设置字体
 set guifont=Consolas:h14
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 隐藏GVIM菜单及设置
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-" 窗口大小
-set lines=35 columns=140
 " 分割出来的窗口位于当前窗口下边/右边
 set splitbelow
 set splitright
-"不显示工具/菜单栏
-set guioptions-=T
-set guioptions-=m
-set guioptions-=L
-set guioptions-=r
-set guioptions-=b
-" 使用内置 tab 样式而不是 gui
-set guioptions-=e
-set nolist
 
+"设置leader键
 let mapleader = "\<space>" "定义<leader>键
 set nocompatible    "设置不兼容原始vi模式
 filetype on     "设置开启文件类型侦测
@@ -26,7 +12,7 @@ filetype plugin on  "加载对应文件类型插件
 set noeb        "关闭错误提示
 syntax on       "自动语法高亮
 set t_Co=256        "开启256色支持
-set cmdheight=2    "设置命令行高度
+set cmdheight=1    "设置命令行高度
 set showcmd     "select模式下显示选中的行数
 set ruler       "总是显示光标的位置
 set laststatus=2    "总是显示状态栏
