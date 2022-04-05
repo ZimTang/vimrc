@@ -78,6 +78,8 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 inoremap jk <Esc>
 "刷新配置
 nnoremap <leader>r :source $MYVIMRC<cr>
+"快速打开vim配置文件：_vimrc
+nnoremap <leader><leader>e :e C:/Users/23510/AppData/Local/nvim/init.vim<cr>
 
 " <leader>+q 快速退出vim
 nnoremap <leader>q :q<cr>
