@@ -1,4 +1,4 @@
-set guifont=Consolas:h16
+set guifont=Consolas:h14
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 隐藏GVIM菜单及设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -24,10 +24,9 @@ set nocompatible    "设置不兼容原始vi模式
 filetype on     "设置开启文件类型侦测
 filetype plugin on  "加载对应文件类型插件
 set noeb        "关闭错误提示
-syntax enable       "开启语法高亮功能
 syntax on       "自动语法高亮
 set t_Co=256        "开启256色支持
-set cmdheight=2     "设置命令行高度
+set cmdheight=2    "设置命令行高度
 set showcmd     "select模式下显示选中的行数
 set ruler       "总是显示光标的位置
 set laststatus=2    "总是显示状态栏
@@ -75,7 +74,6 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 优化设置
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "映射 esc 键为 jk
 inoremap jk <Esc>
 "刷新配置
@@ -88,11 +86,7 @@ nnoremap <leader>q :q<cr>
 imap <c-a> <Esc>la
 "插入模式移动到下一行
 imap <c-d> <Esc>o
-"移动到末尾
-imap <c-e> <Esc>A
 
-" 添加“空格键”为代码折叠
-set foldmethod=indent
 
 " vim-plug
 " ******************************BEGIN******************************
@@ -135,8 +129,6 @@ Plug 'mhinz/vim-startify'
 "fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"根据缩进折叠代码
-Plug 'tmhedberg/SimpylFold'
 "彩虹括号增强
 Plug 'luochen1990/rainbow'
 "对齐插件
@@ -162,6 +154,9 @@ Plug 'brooth/far.vim'
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'skywind3000/vim-terminal-help'
+Plug 'w0ng/vim-hybrid'
+
 call plug#end()
 " ******************************END******************************
 
@@ -171,7 +166,7 @@ nnoremap <leader><leader>u :PlugUpdate<cr>
 nnoremap <leader><leader>c :PlugClean<cr>
 
 "NERDTree
-nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>v :NERDTreeFind<CR>
 
 "CrtlP
@@ -187,11 +182,11 @@ noremap <C-l> <C-w>l
 
 "easymotion
 " s{char}{char} to move to {char}{char}
-nmap ss <Plug>(easymotion-overwin-f2)
+nmap <leader><leader>s <Plug>(easymotion-overwin-f2)
 
 
 "coc配置
-let g:coc_global_extensions = ['coc-json','coc-vetur','coc-markdown-preview-enhanced','coc-prettier','coc-html','coc-terminal','coc-tsserver','coc-css','coc-gitignore','coc-webview']
+let g:coc_global_extensions = ['coc-marketplace','coc-json','coc-vetur','coc-markdown-preview-enhanced','coc-prettier','coc-html','coc-tsserver','coc-css','coc-gitignore','coc-webview']
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -232,3 +227,9 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " Example: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+"取消高亮搜索
+nnoremap <C-n> :set nohlsearch<CR>
+set background=light
+colorscheme solarized
+syntax enable       "开启语法高亮功能
