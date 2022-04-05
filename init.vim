@@ -159,6 +159,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'skywind3000/vim-terminal-help'
 Plug 'w0ng/vim-hybrid'
 
+Plug 'tyru/open-browser.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 " ******************************END******************************
 
@@ -235,3 +237,5 @@ nnoremap <C-n> :set nohlsearch<CR>
 set background=light
 colorscheme solarized
 syntax enable       "开启语法高亮功能
+"浏览器预览html
+nmap <silent> <leader>w :!google-chrome % &
