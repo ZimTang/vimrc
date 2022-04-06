@@ -225,4 +225,7 @@ colorscheme solarized
 syntax enable       "开启语法高亮功能
 "浏览器预览html
 nmap <silent> <leader>w :!google-chrome % &
-
+"使用系统剪贴板复制
+nmap <leader>y "+y
+"使用系统剪贴板粘贴
+nmap <leader>p "+p
