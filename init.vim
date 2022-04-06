@@ -16,7 +16,7 @@ set cmdheight=1    "设置命令行高度
 set showcmd     "select模式下显示选中的行数
 set ruler       "总是显示光标的位置
 set laststatus=2    "总是显示状态栏
-set number      "开启行号显示
+set relativenumber!      "开启相对行号行号显示
 set cursorline      "高亮显示当前行
 set whichwrap+=<,>,h,l  "设置光标键跨行
 set virtualedit=block,onemore   "允许光标出现在最后一个字符的后面
@@ -65,7 +65,7 @@ inoremap jk <Esc>
 "刷新配置
 nnoremap <leader>r :source $MYVIMRC<cr>
 "快速打开vim配置文件：_vimrc
-nnoremap <leader><leader>e :e C:/Users/23510/AppData/Local/nvim/init.vim<cr>
+nnoremap <leader><leader>e :e C:/Users/Twitzz/AppData/Local/nvim/init.vim<cr>
 
 " <leader>+q 快速退出vim
 nnoremap <leader>q :q<cr>
